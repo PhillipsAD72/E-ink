@@ -1,0 +1,1 @@
+Repozitář hodlám využít pro shromáždění podkladů ohledně připojení e ink zobrazovače k Arduinu. Rád bych dosáhl toho, aby výsledkem byl funkční projekt, kdy nějaké klasické Arduino (asi ale s I/O 3.3V) bude schopné obsluhovat e ink displej 2.13" b/w/r od WeAct.
