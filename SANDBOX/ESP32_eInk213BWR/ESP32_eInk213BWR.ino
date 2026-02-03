@@ -10,14 +10,14 @@
 #include <Fonts/FreeMonoBold9pt7b.h>
 
 // Propojte SPI rozhraní displeje s ESP32:
-// CS(SS)=5,SCL(SCK)=18,SDA(MOSI)=23,BUSY=4,RES(RST)=17,DC=16
+// CS(SS)=5 [D5], SCL(SCK)=18 [D18], SDA(MOSI)=23 [D23], BUSY=4 [D4], RES(RST)=16 [Rx2], DC=17 [Tx2]
 #define CS_PIN (5)
 #define BUSY_PIN (4)
 #define RES_PIN (16)
 #define DC_PIN (17)
 
-// 2.13'' EPD Module: GDEY0213Z98 122x250, SSD1680
-GxEPD2_3C<GxEPD2_213_Z98c, GxEPD2_213_Z98c::HEIGHT> display(GxEPD2_213_Z98c(/*CS=5*/ CS_PIN, /*DC=*/ DC_PIN, /*RES=*/ RES_PIN, /*BUSY=*/ BUSY_PIN));
+// 2.13" EPD Module: GDEY0213Z98 122x250, SSD1680
+GxEPD2_3C<GxEPD2_213_Z98c, GxEPD2_213_Z98c::HEIGHT> display(GxEPD2_213_Z98c(CS_PIN, DC_PIN, RES_PIN, BUSY_PIN));
 
 void setup()
 {
