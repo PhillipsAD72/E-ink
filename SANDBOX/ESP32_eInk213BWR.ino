@@ -1,15 +1,16 @@
-// Zkušební aplikace založená na vzorovém příkladu od výrobce
+// Zkušební aplikace založená na vzorovém příkladu od výrobce:
+// https://github.com/WeActStudio/WeActStudio.EpaperModule/blob/master/Example/EpaperModuleTest_Arduino_ESP32/EpaperModuleTest_Arduino_ESP32.ino
+
 // byly odstraněny přebytečné řádky s jinými typy displejů
 
-// base class GxEPD2_GFX can be used to pass references or pointers to the display instance as parameter, uses ~1.2k more code
-// enable or disable GxEPD2_GFX base class
 #define ENABLE_GxEPD2_GFX 0
 
 #include <GxEPD2_BW.h>
 #include <GxEPD2_3C.h>
 #include <Fonts/FreeMonoBold9pt7b.h>
 
-// ESP32 CS(SS)=5,SCL(SCK)=18,SDA(MOSI)=23,BUSY=4,RES(RST)=17,DC=16
+// Propojte SPI rozhraní displeje s ESP32:
+// CS(SS)=5,SCL(SCK)=18,SDA(MOSI)=23,BUSY=4,RES(RST)=17,DC=16
 #define CS_PIN (5)
 #define BUSY_PIN (4)
 #define RES_PIN (16)
